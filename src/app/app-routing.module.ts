@@ -11,6 +11,7 @@ import { SoyanaComponent } from './pages/soyana/soyana.component';
 import { SigningUpComponent } from './pages/signing-up/signing-up.component';
 import { SigningConfirmComponent } from './pages/signing-confirm/signing-confirm.component';
 import { EventoInscriptionComponent } from './pages/evento-inscription/evento-inscription.component';
+import { InscriptionsListComponent } from './pages/inscriptions-list/inscriptions-list.component';
 
 const routes: Routes = [
   {path: 'home'   , component: HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'register' , component : RegisterComponent},
   { path: 'inscripcion-talleres' , component : SigningUpComponent},
   { path: 'inscripcion-virago' , component : EventoInscriptionComponent},
+  { path: 'inscriptions-list' , component : InscriptionsListComponent},
   { path: 'signing-confirm' , component : SigningConfirmComponent},
   { path: '**', redirectTo: 'home'}
 ];

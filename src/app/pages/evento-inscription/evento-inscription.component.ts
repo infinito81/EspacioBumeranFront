@@ -38,12 +38,20 @@ export class EventoInscriptionComponent {
           pack: ['', Validators.required]
       });
 
-      
+      this.visitRegistration();
   }
 
   // convenience getter for easy access to form fields
   get f() { return this.form.controls; }
 
+
+  visitRegistration(){
+    this.siningUpService.visitRegistration('VIRAGO').subscribe(()  => {
+      console.log("visit register ok");
+    } ,(err:any) =>{
+      console.error(err);
+    }); 
+  }
 
   onSubmit() {
     this.submitted = true;

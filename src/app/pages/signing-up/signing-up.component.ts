@@ -45,6 +45,8 @@ export class SigningUpComponent {
       });
 
       this.disabledAllOptions();
+
+      this.visitRegistration();
   }
 
   // convenience getter for easy access to form fields
@@ -82,7 +84,7 @@ export class SigningUpComponent {
           .subscribe({
               next: (resp:any) => {
                   this.alertService.success('Registration successful', { keepAfterRouteChange: true });
-                  this.tempId = setTimeout( () => {
+                  
                     Swal.close();
                     const dataForm : NavigationExtras = {relativeTo: this.route};
                     this.inscriptionId = resp;
@@ -91,7 +93,7 @@ export class SigningUpComponent {
                     sessionStorage.setItem('pack', this.form.controls.pack.value + "");
                     this.router.navigate(['../signing-confirm'], dataForm);
 
-                  }, 2000);
+                  
 
               },
               error: error => {
@@ -185,4 +187,11 @@ export class SigningUpComponent {
     console.log('unmarks all ' + this.optionPack);    
   }  
 
+  visitRegistration(){
+    this.siningUpService.visitRegistration('talleres').subscribe(()  => {
+      console.log("visit register ok");
+    } ,(err:any) =>{
+      console.error(err);
+    }); 
+  }
 }

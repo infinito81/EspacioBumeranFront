@@ -34,6 +34,7 @@ import { SoyanaComponent } from './pages/soyana/soyana.component';
 import { SigningUpComponent } from './pages/signing-up/signing-up.component';
 import { SigningConfirmComponent } from './pages/signing-confirm/signing-confirm.component';
 import { EventoInscriptionComponent } from './pages/evento-inscription/evento-inscription.component';
+import { InscriptionsListComponent } from './pages/inscriptions-list/inscriptions-list.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { EventoInscriptionComponent } from './pages/evento-inscription/evento-in
     SoyanaComponent,
     SigningUpComponent,
     SigningConfirmComponent,
-    EventoInscriptionComponent   
+    EventoInscriptionComponent,
+    InscriptionsListComponent   
   ],
   imports: [
     BrowserModule,

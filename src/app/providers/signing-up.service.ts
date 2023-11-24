@@ -12,6 +12,8 @@ export class SigningUpService {
     private formSubject: BehaviorSubject<SigninCoursesForm | null>;
     public form: Observable<SigninCoursesForm | null>;
 
+    resp : any;
+
     constructor(
         private router: Router,
         private http: HttpClient
@@ -36,6 +38,26 @@ export class SigningUpService {
         //return this.http.post(`${this.url}/postSaveStaffUser`, user, headerOptions);
 
         return this.http.post(`${environment.url_general}/users/signinOnlineCourses`, form, headerOptions);
+    }
+
+    visitRegistration(modo : string){   
+        const headerOptions = {
+          headers: new HttpHeaders({
+            'Content-Type' : 'application/json'
+          })
+        };
+    
+        return this.http.get(`${environment.url_general}/users/visitRegistration?modo=${modo}`, headerOptions);
+    }    
+
+    getAllInscriptions(){
+      const headerOptions = {
+        headers: new HttpHeaders({
+          'Content-Type' : 'application/json'      
+        })
+      };
+
+      return this.http.get(`${environment.url_general}/users/getInscriptions`, headerOptions);      
     }
 
 
