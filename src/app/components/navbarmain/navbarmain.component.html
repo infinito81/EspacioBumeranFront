@@ -1,0 +1,47 @@
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <!--<a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>ESPACIO</h1>
+            </a>-->
+            <a href="index.html" class="navbar-brand">
+                <img class="img-fluid" src="../../../assets/images/logo/logo_HQ_negativo_100x100.jpg">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a (click)="routerObj.navigateByUrl('/home')" class="nav-item nav-link active">Inicio</a>
+                    <a href="about.html" class="nav-item nav-link">Soy Ana</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Formaciones</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="Cursos.html" class="dropdown-item">Cursos</a>
+                            <a href="team.html" class="dropdown-item">MasterClass</a>
+                            <a href="team.html" class="dropdown-item">WorkShops</a>
+                        </div>                        
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Coaching</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="Cursos.html" class="dropdown-item">1:1</a>
+                            <a href="team.html" class="dropdown-item">Grupal</a>
+                            <a href="call-to-action.html" class="dropdown-item">Equipos</a>
+                        </div>                        
+                    </div>                    
+                    <a href="about.html" class="nav-item nav-link">Blog</a>
+                    <a href="about.html" class="nav-item nav-link">Mentorías</a>
+                    <a href="about.html" class="nav-item nav-link">Asesorías</a>
+
+
+                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                </div>
+                <!--<div *ngIf="userName==null || userName==''">
+                    <a class="btn btn-primary rounded-pill px-3 d-none d-lg-block" routerLink="/login">ENTRAR</a>
+                </div>
+                <div *ngIf="userName!=null && userName!=''">
+                    <a class="btn btn-primary rounded-pill px-3 d-none d-lg-block" (click)="signOut()">SALIR</a>
+                </div>                -->
+            </div>
+        </nav>
+        <!-- Navbar End -->

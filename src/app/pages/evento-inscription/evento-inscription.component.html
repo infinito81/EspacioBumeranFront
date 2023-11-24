@@ -1,0 +1,51 @@
+<div class="card">
+    <h3 class="card-header">CUESTIONARIO DE INSCRIPCIÓN AL EVENTO CONEXIÓN VIRAGO</h3>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.firstName.errors.required">Campo Nombre Obligatorio</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Apellidos</label>
+                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastName.errors.required">Campo Apellidos Obligatorio</div>
+                </div>
+            </div>            
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" formControlName="emailAddress" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.emailAddress.errors }" />
+                <div *ngIf="submitted && f.emailAddress.errors" class="invalid-feedback">
+                    <div *ngIf="f.emailAddress.errors.required">Campo Email Obligatorio</div>
+                </div>
+            </div>            
+            <div class="mb-3">
+                <label class="form-label">Teléfono</label>
+                <input type="phone" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                    <div *ngIf="f.phone.errors.required">Campo Teléfono Obligatorio</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <mat-form-field [style.width.px]=380>
+                    <mat-label>Tipo de pack</mat-label>
+                    <mat-select [(ngModel)]="optionPack" formControlName="pack" required>
+                        <mat-option value="11">BLACK VIRAGO (ahora solo 190€)</mat-option>
+                        <mat-option value="12">COMBO FRIENDS (ahora solo 360€)</mat-option>
+                    </mat-select>
+                </mat-form-field>                           
+            </div>
+            <div>
+                <button class="btn btn-primary">
+                    <!--<span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>-->
+                    ACEPTAR
+                </button>
+                <!--<a routerLink="../login" class="btn btn-link">CANCELAR</a>-->
+            </div>
+        </form>
+    </div>
+</div>
