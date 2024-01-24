@@ -1,47 +1,58 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-            <!--<a href="index.html" class="navbar-brand">
-                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>ESPACIO</h1>
-            </a>-->
-            <a href="index.html" class="navbar-brand">
-                <img class="img-fluid" src="../../../assets/images/logo/logo_HQ_negativo_100x100.jpg">
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto">
-                    <a (click)="routerObj.navigateByUrl('/home')" class="nav-item nav-link active">Inicio</a>
-                    <a href="about.html" class="nav-item nav-link">Soy Ana</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle">Formaciones</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="Cursos.html" class="dropdown-item">Cursos</a>
-                            <a href="team.html" class="dropdown-item">MasterClass</a>
-                            <a href="team.html" class="dropdown-item">WorkShops</a>
-                        </div>                        
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle">Coaching</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="Cursos.html" class="dropdown-item">1:1</a>
-                            <a href="team.html" class="dropdown-item">Grupal</a>
-                            <a href="call-to-action.html" class="dropdown-item">Equipos</a>
-                        </div>                        
-                    </div>                    
-                    <a href="about.html" class="nav-item nav-link">Blog</a>
-                    <a href="about.html" class="nav-item nav-link">Mentorías</a>
-                    <a href="about.html" class="nav-item nav-link">Asesorías</a>
-
-
-                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
-                </div>
-                <!--<div *ngIf="userName==null || userName==''">
-                    <a class="btn btn-primary rounded-pill px-3 d-none d-lg-block" routerLink="/login">ENTRAR</a>
-                </div>
-                <div *ngIf="userName!=null && userName!=''">
-                    <a class="btn btn-primary rounded-pill px-3 d-none d-lg-block" (click)="signOut()">SALIR</a>
-                </div>                -->
+            <div class="container">
+                <a class="navbar-brand" href="index.html" >
+                    <img class="img-fluid" src="../../assets/img/logo/logo_HQ_negativo_100x100.jpg">
+                </a>
+                <!-- Botón de alternancia para modo responsive -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/home">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/soyana">Soy Ana</a>
+                        </li>      
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Formaciones
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Cursos</a>
+                            <a class="dropdown-item" href="#">MasterClass</a>                            
+                            <a class="dropdown-item" href="#">WorkShops</a>                            
+                            </div>
+                        </li> 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Coaching
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">1:1</a>
+                            <a class="dropdown-item" href="#">Grupal</a>                            
+                            <a class="dropdown-item" href="#">Equipos</a>                            
+                            </div>
+                        </li>                                                         
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/home">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/soyana">Mentorías</a>
+                        </li>   
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/soyana">Asesorías</a>
+                        </li>   
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/soyana">Contacto</a>
+                        </li>  
+                        <li class="nav-item d-md-none">
+                            <a class="btn btn-primary mt-3" routerLinkActive="active" routerLink="/summary">ACCESO AULA</a>
+                        </li>                                             
+                    </ul>
+                </div> 
+                <a class="btn btn-primary" id="boton_acceso_aula" routerLinkActive="active" routerLink="/summary">ACCESO AULA</a>           
             </div>
         </nav>
-        <!-- Navbar End -->

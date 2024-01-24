@@ -46,7 +46,7 @@ export class SigningUpComponent {
 
       this.disabledAllOptions();
 
-      this.visitRegistration();
+      //this.visitRegistration();
   }
 
   // convenience getter for easy access to form fields
@@ -187,11 +187,11 @@ export class SigningUpComponent {
     console.log('unmarks all ' + this.optionPack);    
   }  
 
-  visitRegistration(){
+  /*visitRegistration(){
     this.siningUpService.visitRegistration('talleres').subscribe(()  => {
       console.log("visit register ok");
     } ,(err:any) =>{
       console.error(err);
     }); 
-  }
+  }*/
 }

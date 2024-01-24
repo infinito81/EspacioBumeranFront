@@ -35,6 +35,8 @@ import { SigningUpComponent } from './pages/signing-up/signing-up.component';
 import { SigningConfirmComponent } from './pages/signing-confirm/signing-confirm.component';
 import { EventoInscriptionComponent } from './pages/evento-inscription/evento-inscription.component';
 import { InscriptionsListComponent } from './pages/inscriptions-list/inscriptions-list.component';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -55,7 +57,9 @@ import { InscriptionsListComponent } from './pages/inscriptions-list/inscription
     SigningUpComponent,
     SigningConfirmComponent,
     EventoInscriptionComponent,
-    InscriptionsListComponent   
+    InscriptionsListComponent,
+    CarruselComponent,
+    NavbarComponent   
   ],
   imports: [
     BrowserModule,

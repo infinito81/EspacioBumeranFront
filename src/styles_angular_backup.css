@@ -1,7 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
 /********** Template CSS **********/
-
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
 :root {
     --primary: #FE5D37;
     --light: #FFF5F3;
@@ -40,8 +38,6 @@
 
 .btn.btn-primary {
     color: #FFFFFF;
-    background-color: var(--primary);
-    border-color: var(--primary);
 }
 
 .btn-square {
@@ -105,8 +101,7 @@ h6,
 /*** Navbar ***/
 .navbar .navbar-nav .nav-link {
     padding: 30px 15px;
-    color: #000 !important;
-    font-size: large;
+    color: var(--dark);
     font-weight: 500;
     outline: none;
 }
@@ -135,13 +130,6 @@ h6,
     transform: rotate(-180deg);
 }
 
-/* Media query para pantallas con una resolución mayor de 1000px */
-@media screen and (min-width: 1001px) {
-    .navbar a {
-        font-size: 12px !important; /* Ajusta el tamaño del texto según sea necesario */
-    }
-}
-
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
@@ -152,19 +140,9 @@ h6,
         margin-top: 15px;
         border-top: 1px solid #EEEEEE;
     }
-
-    .navbar .navbar-nav .nav-item .dropdown-menu {
-        border: none; /* Quita el borde gris */
-        /*box-shadow: none; /* Quita cualquier sombra si la hay */        
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajusta según tus preferencias */
-    }
 }
 
 @media (min-width: 992px) {
-    .navbar .navbar-nav .nav-link  {
-        margin-right: 10px;
-        padding: 10px 0;
-    }
     .navbar .nav-item .dropdown-menu {
         display: block;
         top: calc(100% - 15px);
@@ -195,8 +173,7 @@ h6,
     height: 10px;
     top: 0;
     left: 0;
-    /*background: url(./assets/img/bg-header-top.png) center center repeat-x;
-    */
+    background: url(./assets/images/bg-header-top.png) center center repeat-x;
     z-index: 1;
 }
 
@@ -205,7 +182,7 @@ h6,
     height: 19px;
     top: auto;
     bottom: 0;
-    /*background: url(./assets/img/bg-header-bottom.png) center center repeat-x;*/
+    background: url(./assets/images/bg-header-bottom.png) center center repeat-x;
 }
 
 @media (max-width: 768px) {
@@ -264,7 +241,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(./assets/img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(./assets/images/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -526,14 +503,5 @@ h6,
     border-right: none;
 }
 
-/* Estilos generales para el enlace */
-#boton_acceso_aula {
-    color: #FFFFFF;
-  }
-  
-  /* Media query para ocultar el enlace en dispositivos con un ancho máximo de 600 píxeles (ajusta según tus necesidades) */
-  @media only screen and (max-width: 600px) {
-    #boton_acceso_aula {
-      display: none; /* Oculta el enlace en modo responsive */
-    }
-  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

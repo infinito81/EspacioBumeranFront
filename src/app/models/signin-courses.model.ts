@@ -7,7 +7,7 @@ export class SigninWorkshop {
     token?: string;
 */
     inscriptionId ?: string;
-    mail ?: string;
+    email ?: string;
     nombre?: string;
     apellidos?: string;
     telefono?: string;

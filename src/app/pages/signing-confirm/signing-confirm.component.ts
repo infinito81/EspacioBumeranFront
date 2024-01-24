@@ -29,11 +29,11 @@ export class SigningConfirmComponent  implements OnInit {
         this.precio = "50 euros";
         this.mostrarTalleres = true;
       } else if (this.pack=="11"){
-        this.precio = "190 euros";
+        this.precio = "249 euros";
         this.mostrarVirago = true;
       } else if (this.pack=="12"){
         this.mostrarVirago = true;
-        this.precio = "360 euros";                
+        this.precio = "450 euros";                
       }
 
       console.log("INSCRIPTION ID --> " + this.inscriptionId);
