@@ -1,0 +1,60 @@
+<div class="card">
+    <h3 class="card-header">INSCRIPCIÓN AL TALLER VÍNCULOS: AUTOESTIMA Y EMOCIONES</h3>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.firstName.errors.required">Campo Nombre Obligatorio</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Apellidos</label>
+                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastName.errors.required">Campo Apellidos Obligatorio</div>
+                </div>
+            </div>            
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" formControlName="emailAddress" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.emailAddress.errors }" />
+                <div *ngIf="submitted && f.emailAddress.errors" class="invalid-feedback">
+                    <div *ngIf="f.emailAddress.errors.required">Campo Email Obligatorio</div>
+                </div>
+            </div>            
+            <div class="mb-3">
+                <label class="form-label">Teléfono</label>
+                <input type="phone" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                    <div *ngIf="f.phone.errors.required">Campo Teléfono Obligatorio</div>
+                </div>
+            </div>
+<!--             <div class="mb-3">
+                <mat-form-field [style.width.px]=327>
+                    <mat-label>Tipo de pack</mat-label>
+                    <mat-select [(ngModel)]="optionPack" formControlName="pack" (selectionChange)="enabledAllOptions();unmarksAllOptions();" required>
+                        <mat-option value="1" >Individual (ahora solo 25€)</mat-option>
+                        <mat-option value="2">Pack 2x1 (ahora solo 30€)</mat-option>
+                        <mat-option value="3">Combo 3 (ahora solo 50€)</mat-option>
+                    </mat-select>
+                </mat-form-field>                           
+            </div> -->
+ 
+            <div class="mb-3">
+                <section class="example-section">
+                    <p><mat-checkbox formControlName="sociotorre" (change)='coursesControl("sociotorre");'>Soci@ AMPA Torre Cervatos</mat-checkbox></p>
+                    <p><mat-checkbox formControlName="socioeugenio" (change)='coursesControl("socioeugenio");'>Soci@ AMPA San Eugenio</mat-checkbox></p>
+                    <p><mat-checkbox formControlName="nosocio" (change)='coursesControl("nosocio");'>NO Soci@</mat-checkbox></p>
+                </section>
+            </div>
+            <div>
+                <button class="btn btn-primary">
+                    <!--<span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>-->
+                    ACEPTAR
+                </button>
+                <!--<a routerLink="../login" class="btn btn-link">CANCELAR</a>-->
+            </div>
+        </form>
+    </div>
+</div>

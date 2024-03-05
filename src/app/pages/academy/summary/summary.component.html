@@ -1,27 +1,33 @@
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="primary" class="flexSpaceBetween">
-      <span *ngIf="mobileQuery.matches"><button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button></span>
-      <span>&nbsp;&nbsp;&nbsp;&nbsp;INICIO</span>
-      <span>Bienvenido/a {{userName}}</span>
-    </mat-toolbar>
+
+<div class="container-xxl bg-white p-0">
+  <app-navbarmain></app-navbarmain> 
   
-    <mat-sidenav-container class="example-sidenav-container"
-                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-      <mat-sidenav opened #snav [mode]="mobileQuery.matches ? 'over': 'side'"
-                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" color="primary">
-          <app-navsidepart></app-navsidepart>
-      </mat-sidenav>
-  
-      <mat-sidenav-content>
-        <p>Summary works</p>
-        <p>Summary works</p>
-        <p>Summary works</p>
-        <p>Summary works</p>
-        <p>Summary works</p>
-        <p>Summary works</p>
-        <p>Summary works</p>
-        <p>Summary works</p>
-        <p>Summary works</p>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
+
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+      <mat-toolbar color="primary" class="flexSpaceBetween">
+        <span *ngIf="mobileQuery.matches"><button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button></span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;INICIO</span>
+        <span>Bienvenido/a {{userName}}</span>
+      </mat-toolbar>
+    
+      <mat-sidenav-container class="example-sidenav-container"
+                            [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav opened #snav [mode]="mobileQuery.matches ? 'over': 'side'"
+                    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" color="primary">
+            <app-navsidepart></app-navsidepart>
+        </mat-sidenav>
+    
+        <mat-sidenav-content>
+          <p>Summary works</p>
+          <p>Summary works</p>
+          <p>Summary works</p>
+          <p>Summary works</p>
+          <p>Summary works</p>
+          <p>Summary works</p>
+          <p>Summary works</p>
+          <p>Summary works</p>
+          <p>Summary works</p>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+</div>   

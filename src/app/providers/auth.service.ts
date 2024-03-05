@@ -64,6 +64,10 @@ export class AuthService {
     }, httpOptions);
   }
 
+  isAuthenticated(){
+    return this.tokenS.isAuthenticated();
+  }
+
 
   readToken() {
 

@@ -40,14 +40,17 @@ export class SigningUpService {
         return this.http.post(`${environment.url_general}/users/signinOnlineCourses`, form, headerOptions);
     }
 
-    visitRegistration(modo : string){   
+    visitRegistration(page : string){   
+
+        console.log('visit registration');
+
         const headerOptions = {
           headers: new HttpHeaders({
             'Content-Type' : 'application/json'
           })
         };
     
-        return this.http.get(`${environment.url_general}/users/visitRegistration?modo=${modo}`, headerOptions);
+        return this.http.get(`${environment.url_general}/test/visitRegistration?page=${page}`, headerOptions);
     }    
 
     getAllInscriptions(){

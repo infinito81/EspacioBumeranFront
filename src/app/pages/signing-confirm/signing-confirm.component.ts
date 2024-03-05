@@ -12,10 +12,12 @@ export class SigningConfirmComponent  implements OnInit {
     pack? : any;
     mostrarVirago = false;
     mostrarTalleres = false;
+    mostrarTallerAmpa = false;
 
     ngOnInit(): void {
       this.inscriptionEmail = sessionStorage.getItem('inscriptionEmail');
       this.inscriptionId = sessionStorage.getItem('inscriptionId');
+      this.precio = sessionStorage.getItem('precio');
 
       this.pack = sessionStorage.getItem('pack');
       console.log("PACK --> " + this.pack);
@@ -34,6 +36,10 @@ export class SigningConfirmComponent  implements OnInit {
       } else if (this.pack=="12"){
         this.mostrarVirago = true;
         this.precio = "450 euros";                
+      } else if (this.pack=="20"){
+        console.log("activo mostrarTallerAmpa");
+        this.mostrarTallerAmpa = true;
+        //this.precio = "18 euros";
       }
 
       console.log("INSCRIPTION ID --> " + this.inscriptionId);

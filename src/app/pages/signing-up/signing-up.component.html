@@ -30,7 +30,7 @@
                     <div *ngIf="f.phone.errors.required">Campo Teléfono Obligatorio</div>
                 </div>
             </div>
-            <div class="mb-3">
+<!--             <div class="mb-3">
                 <mat-form-field [style.width.px]=327>
                     <mat-label>Tipo de pack</mat-label>
                     <mat-select [(ngModel)]="optionPack" formControlName="pack" (selectionChange)="enabledAllOptions();unmarksAllOptions();" required>
@@ -39,7 +39,16 @@
                         <mat-option value="3">Combo 3 (ahora solo 50€)</mat-option>
                     </mat-select>
                 </mat-form-field>                           
+            </div> -->
+            <div class="mb-3">
+                <label for="tipoPack" class="form-label">Tipo de pack</label>
+                <select id="tipoPack" class="form-select" [(ngModel)]="optionPack" formControlName="pack" (change)="enabledAllOptions(); unmarksAllOptions();" required>
+                    <option value="1">Individual (ahora solo 25€)</option>
+                    <option value="2">Pack 2x1 (ahora solo 30€)</option>
+                    <option value="3">Combo 3 (ahora solo 50€)</option>
+                </select>
             </div>
+            
             <div class="mb-3">
                 <section class="example-section">
                     <h4>Selecciona tus cursos</h4>

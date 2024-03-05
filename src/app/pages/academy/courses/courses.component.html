@@ -1,43 +1,45 @@
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="flexSpaceBetween">
-    <span *ngIf="mobileQuery.matches"><button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button></span>
-    <span>&nbsp;&nbsp;&nbsp;&nbsp;INICIO</span>
-    <span>Bienvenido/a {{userName}}</span>
-  </mat-toolbar>
+<div class="container-xxl bg-white p-0">
+  <app-navbarmain></app-navbarmain> 
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="flexSpaceBetween">
+      <span *ngIf="mobileQuery.matches"><button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button></span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;INICIO</span>
+      <span>Bienvenido/a {{userName}}</span>
+    </mat-toolbar>
 
-  <mat-sidenav-container class="example-sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav opened #snav [mode]="mobileQuery.matches ? 'over': 'side'"
-                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" color="primary">
-        <app-navsidepart></app-navsidepart>
-    </mat-sidenav>
+    <mat-sidenav-container class="example-sidenav-container"
+                          [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav opened #snav [mode]="mobileQuery.matches ? 'over': 'side'"
+                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" color="primary">
+          <app-navsidepart></app-navsidepart>
+      </mat-sidenav>
 
-    <mat-sidenav-content>
-      <div class="row row-cols-1 row-cols-md-4">
-        <div class="col" *ngFor="let item of courses;index as i;">
-            <mat-card class="example-card">
-                <mat-card-header>
-                  <mat-card-title>{{item.txtoCorto}}</mat-card-title>
-                  <mat-card-subtitle>{{item.txtoLargo}}</mat-card-subtitle>
-                </mat-card-header>
-                
-                <mat-card-content>
-                  <p><img mat-card-image [src]="item.iconoCurso | imagespipe" [alt]="item.descripcionCorta" ></p>
-                  <p>
-                    {{item.descripcionLarga}}
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>LIKE</button>
-                  <button mat-button>SHARE</button>
-                </mat-card-actions>
-              </mat-card>       
-        </div>
-    </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+      <mat-sidenav-content>
+        <div class="row row-cols-1 row-cols-md-4">
+          <div class="col" *ngFor="let item of courses;index as i;">
+              <mat-card class="example-card">
+                  <mat-card-header>
+                    <mat-card-title>{{item.txtoCorto}}</mat-card-title>
+                    <mat-card-subtitle>{{item.txtoLargo}}</mat-card-subtitle>
+                  </mat-card-header>
+                  
+                  <mat-card-content>
+                    <p><img mat-card-image [src]="item.iconoCurso | imagespipe" [alt]="item.descripcionCorta" ></p>
+                    <p>
+                      {{item.descripcionLarga}}
+                    </p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                  </mat-card-actions>
+                </mat-card>       
+          </div>
+      </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
 </div>
-
 
 
 

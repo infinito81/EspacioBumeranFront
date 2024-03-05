@@ -1,18 +1,31 @@
 <div *ngIf="mostrarTalleres">
     <h1>¡ENHORABUENA!</h1>
-    <h3>Tu preinscripción a los talleres online de Espacio Bumerán ha sido realizada con éxito.</h3>
+    <h3>Tu inscripción a los talleres online de Espacio Bumerán ha sido realizada con éxito.</h3>
     <p><b>Para confirmar la inscripción</b> a los talleres tendrás que abonar la cantidad de <b>{{precio}}</b></p>
-    <p>Puedes abonarlo:</p>
+    <p>Puedes abonarlo en un plazo de dos días desde que recibas este mail:</p>
     <li>Vía <b>Bizum</b> al número de teléfono: 618210095</li>
     <li>Vía <b>Transferencia</b> al número de cuenta <b>ES51 3190 2099 17 5819838227</b></li>                                                        
     <br><p>(*) Recuerda poner en el concepto el identificador de inscripción {{inscriptionId}} o tu email</p>
+    <br><p>(*) En caso de que el taller no se realizara, el dinero será devuelto íntegramente</p>
 </div>
 <div *ngIf="mostrarVirago">
     <h1>¡ENHORABUENA!</h1>
-    <h3>Tu preinscripción al evento VIRAGO de Espacio Bumerán ha sido realizada con éxito.</h3>
-    <p><b>Para confirmar la inscripción</b> al evento tendrás que abonar la cantidad de <b>{{precio}}</b></p>
+    <h3>Tu inscripción al Retiro Toledo de Espacio Bumerán ha sido realizada con éxito.</h3>
+    <p><b>Para confirmar la inscripción</b> al evento tendrás que abonar la cantidad de <b>{{precio}}</b> en un plazo de 24 horas desde que recibas este mail</p>
+    <p>Puedes abonarlo en un plazo de dos días desde que recibas este mail:</p>
+    <li>Vía <b>Bizum</b> al número de teléfono: 618210095</li>
+    <li>Vía <b>Transferencia</b> al número de cuenta <b>ES51 3190 2099 17 5819838227</b></li>                                                        
+    <br><p>(*) Recuerda poner en el concepto el identificador de inscripción {{inscriptionId}} o tu email</p>
+    <br><p>(**) En caso de que el retiro no se realizara, el dinero será devuelto íntegramente</p>
+</div>
+
+<div *ngIf="mostrarTallerAmpa">
+    <h1>¡ENHORABUENA!</h1>
+    <h3>Tu inscripción al taller: <b>Vínculos: Autoestima y Emociones</b> de Espacio Bumerán ha sido realizada con éxito.</h3>
+    <p><b>Para confirmar la inscripción</b> al taller tendrás que abonar la cantidad de <b>{{precio}}</b> en un plazo de 24 horas desde que recibas este mail</p>
     <p>Puedes abonarlo:</p>
     <li>Vía <b>Bizum</b> al número de teléfono: 618210095</li>
     <li>Vía <b>Transferencia</b> al número de cuenta <b>ES51 3190 2099 17 5819838227</b></li>                                                        
     <br><p>(*) Recuerda poner en el concepto el identificador de inscripción {{inscriptionId}} o tu email</p>
+    <br><p>(**) En caso de que el taller no se realizara, el dinero será devuelto íntegramente</p>
 </div>

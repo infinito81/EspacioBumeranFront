@@ -3,7 +3,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 :root {
-    --primary: #FE5D37;
+    --primary: #28a745;
     --light: #FFF5F3;
     --dark: #103741;
 }
@@ -36,6 +36,7 @@
 .btn {
     font-weight: 500;
     transition: .5s;
+    font-family: "Poppins";
 }
 
 .btn.btn-primary {
@@ -86,7 +87,7 @@ h4,
 .display-4,
 .display-5,
 .display-6 {
-    font-family: 'Lobster Two', cursive;
+    font-family: "Poppins";
     font-weight: 700;
 }
 
@@ -98,7 +99,7 @@ h6,
 }
 
 .font-secondary {
-    font-family: 'Lobster Two', cursive;
+    font-family: "Poppins";
 }
 
 
@@ -109,11 +110,14 @@ h6,
     font-size: large;
     font-weight: 500;
     outline: none;
+    font-family: "Poppins";
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    /*color: var(--primary);*/
+    background-color: var(--primary); /* Cambia el color de fondo al pasar el ratón */
+    color: #fff !important; /* Cambia el color del texto al pasar el ratón */
 }
 
 .navbar.sticky-top {
@@ -136,10 +140,20 @@ h6,
 }
 
 /* Media query para pantallas con una resolución mayor de 1000px */
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 991.98px) {
     .navbar a {
         font-size: 12px !important; /* Ajusta el tamaño del texto según sea necesario */
     }
+}
+@media screen and (min-width: 1500px) {
+  .navbar a {
+      font-size: 15px !important; /* Ajusta el tamaño del texto según sea necesario */
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .navbar a {
+      font-size: 13px !important; /* Ajusta el tamaño del texto según sea necesario */
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -532,8 +546,19 @@ h6,
   }
   
   /* Media query para ocultar el enlace en dispositivos con un ancho máximo de 600 píxeles (ajusta según tus necesidades) */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1000px) {
     #boton_acceso_aula {
+      display: none; /* Oculta el enlace en modo responsive */
+    }
+  }
+
+  #boton_acceso_aula_responsive {
+    color: #FFFFFF;
+  }
+  
+  /* Media query para ocultar el enlace en dispositivos con un ancho máximo de 600 píxeles (ajusta según tus necesidades) */
+  @media only screen and (min-width: 1000px) {
+    #boton_acceso_aula_responsive {
       display: none; /* Oculta el enlace en modo responsive */
     }
   }

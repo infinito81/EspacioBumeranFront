@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AuthService } from 'src/app/providers/auth.service';
 import { TokenStorageService } from 'src/app/providers/token-storage.service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navbarmain',
@@ -10,13 +11,10 @@ import { Router } from '@angular/router';
 })
 export class NavbarmainComponent {
   routerObj : Router;
-  //userName;
-  //userRole;
+  loggedIn : boolean = false;  
+
   constructor(private authService: AuthService, private tokenService : TokenStorageService, private router: Router) {
-    /*this.userName = authService.getUserName();
-    this.userRole = authService.getUserRole();
-    console.log('Role: ' + this.userRole);
-    console.log('User: ' + this.userName);*/
+
     this.routerObj = router;
    }
 
@@ -29,6 +27,8 @@ export class NavbarmainComponent {
 
   ngOnInit(): void {
     console.log('On init navbar');
+    this.loggedIn = this.authService.isAuthenticated();
+    console.log('authenticated from NavBar --> ' + this.loggedIn);    
   }
 
 

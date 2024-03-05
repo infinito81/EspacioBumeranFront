@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     position: inherit;
-    background: #999;
+    background: #fcfcfc;
   }
   
   .example-is-mobile .example-toolbar {

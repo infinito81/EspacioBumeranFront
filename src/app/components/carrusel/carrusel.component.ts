@@ -8,25 +8,23 @@ declare var $: any;
 })
 export class CarruselComponent implements AfterViewInit, OnDestroy {
 
-  images: string[] = ['carousel-1.jpg', 'carousel-2.jpg', 'carousel-1.jpg'];
+  images: string[] = ['mujeres_desayunando.jpg', 'medina_mudejar.jpg', 'mujeres_desayunando.jpg'];
 
   getImagePath(imageName: string): string {
     return `../../assets/img/${imageName}`;
   }
 
   ngAfterViewInit() {
+    (window as any).contentWayPoint();
+
     $(document).ready(() => {
       $('.owl-carousel').owlCarousel({
         autoplay: true,
-        smartSpeed: 1500,
+        smartSpeed: 2000,
         items: 1,
         dots: true,
         loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ]
+        nav : true
       });
     });
   }

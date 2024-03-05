@@ -28,7 +28,6 @@ import { CardComponent } from './components/card/card.component';
 import { ImagesPipe } from './pipes/images.pipe';
 import { SummaryComponent } from './pages/academy/summary/summary.component';
 import { NavsidepartComponent } from './components/navsidepart/navsidepart.component';
-import { TopnavbarComponent } from './components/topnavbar/topnavbar.component';
 import { AcademyComponent } from './pages/academy/academy.component';
 import { SoyanaComponent } from './pages/soyana/soyana.component';
 import { SigningUpComponent } from './pages/signing-up/signing-up.component';
@@ -36,7 +35,11 @@ import { SigningConfirmComponent } from './pages/signing-confirm/signing-confirm
 import { EventoInscriptionComponent } from './pages/evento-inscription/evento-inscription.component';
 import { InscriptionsListComponent } from './pages/inscriptions-list/inscriptions-list.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { VideocontainerComponent } from './components/videocontainer/videocontainer.component';
+import { InfobasiceventComponent } from './components/infobasicevent/infobasicevent.component';
+import { AboutRetreatComponent } from './components/about-retreat/about-retreat.component';
+import { WorkshopsInscriptionComponent } from './pages/workshops-inscription/workshops-inscription.component';
+
 
 
 @NgModule({
@@ -51,7 +54,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ImagesPipe,
     SummaryComponent,
     NavsidepartComponent,
-    TopnavbarComponent,
     AcademyComponent,
     SoyanaComponent,
     SigningUpComponent,
@@ -59,7 +61,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     EventoInscriptionComponent,
     InscriptionsListComponent,
     CarruselComponent,
-    NavbarComponent   
+    VideocontainerComponent,
+    InfobasiceventComponent,
+    AboutRetreatComponent,
+    WorkshopsInscriptionComponent
   ],
   imports: [
     BrowserModule,

@@ -12,15 +12,17 @@ import { SigningUpComponent } from './pages/signing-up/signing-up.component';
 import { SigningConfirmComponent } from './pages/signing-confirm/signing-confirm.component';
 import { EventoInscriptionComponent } from './pages/evento-inscription/evento-inscription.component';
 import { InscriptionsListComponent } from './pages/inscriptions-list/inscriptions-list.component';
+import { WorkshopsInscriptionComponent } from './pages/workshops-inscription/workshops-inscription.component';
 
 const routes: Routes = [
   {path: 'home'   , component: HomeComponent},
-  {path: 'soyana'   , component: SoyanaComponent},
+  {path: 'soyana'   , component: HomeComponent},
   {path : 'courses', component: CoursesComponent, canActivate: [ AuthGuard ]},
   {path : 'summary', component: SummaryComponent, canActivate: [ AuthGuard ]},
   { path: 'login'   , component: LoginComponent },
   { path: 'register' , component : RegisterComponent},
   { path: 'inscripcion-talleres' , component : SigningUpComponent},
+  { path: 'inscripcion-taller-ampa' , component : WorkshopsInscriptionComponent},
   { path: 'inscripcion-virago' , component : EventoInscriptionComponent},
   { path: 'inscriptions-list' , component : InscriptionsListComponent},
   { path: 'signing-confirm' , component : SigningConfirmComponent},
