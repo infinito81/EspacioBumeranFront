@@ -65,6 +65,7 @@ export class LoginComponent implements OnInit {
         this.tokenService.saveExpired(data.expires_in);
         this.tokenService.saveRefreshToken(data.refresh_token);
         this.tokenService.saveUser(data);
+        this.auth.setLogin(true);
         Swal.close();
         console.log("respuesta login. Vamos a home");
         this.router.navigateByUrl('/summary');

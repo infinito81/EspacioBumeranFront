@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { TokenStorageService } from './token-storage.service';
@@ -20,6 +20,7 @@ const httpOptions = {
 export class AuthService {
 
   userToken: string | null;
+  private loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private tokenS : TokenStorageService, private  router : Router) { 
     this.userToken = "";
@@ -131,7 +132,16 @@ export class AuthService {
     }
   }
 
+  setLogin(logged:boolean){
+    this.loggedIn.next(logged);
+  }
+
   logout(){
     this.tokenS.signOut();
+    this.loggedIn.next(false);
+  }
+
+  isLoggedIn(){
+    return this.loggedIn.asObservable();
   }
 }

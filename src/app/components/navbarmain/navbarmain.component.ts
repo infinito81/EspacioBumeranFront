@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarmainComponent {
   routerObj : Router;
-  loggedIn : boolean = false;  
+  loggedIn = false;  
 
   constructor(private authService: AuthService, private tokenService : TokenStorageService, private router: Router) {
 
@@ -27,7 +27,9 @@ export class NavbarmainComponent {
 
   ngOnInit(): void {
     console.log('On init navbar');
-    this.loggedIn = this.authService.isAuthenticated();
+    this.authService.isLoggedIn().subscribe((isLoggedIn: boolean) => {
+      this.loggedIn = isLoggedIn;
+    });
     console.log('authenticated from NavBar --> ' + this.loggedIn);    
   }
 

@@ -16,7 +16,7 @@ import { WorkshopsInscriptionComponent } from './pages/workshops-inscription/wor
 
 const routes: Routes = [
   {path: 'home'   , component: HomeComponent},
-  {path: 'soyana'   , component: HomeComponent},
+  {path: 'soyana'   , component: SoyanaComponent},
   {path : 'courses', component: CoursesComponent, canActivate: [ AuthGuard ]},
   {path : 'summary', component: SummaryComponent, canActivate: [ AuthGuard ]},
   { path: 'login'   , component: LoginComponent },

@@ -43,8 +43,11 @@
                         <a class="nav-link" routerLink="/home">Contacto</a>
                     </li>  
                     <li class="nav-item">
-                        <a class="btn btn-dark mt-3" id="boton_acceso_aula_responsive" routerLinkActive="active" routerLink="/summary">ACCESO AULA</a>
-                        <!-- <a class="btn btn-dark mt-3" id="boton_acceso_aula_responsive" routerLinkActive="active" routerLink="/home">ACCESO AULA</a> -->
+                        <a *ngIf="loggedIn; else loginButtonResponsive" class="btn btn-success mt-3" id="boton_acceso_aula_responsive" routerLinkActive="active" routerLink="/summary">BIENVENIDO</a>
+                        <ng-template #loginButtonResponsive>
+                            <a class="btn btn-dark mt-3" id="boton_acceso_aula_responsive" routerLinkActive="active" routerLink="/summary">ACCESO AULA</a>
+                        </ng-template>
+                        
                     </li>                                             
                 </ul>
               </div>
