@@ -36,7 +36,7 @@ export class WorkshopsInscriptionComponent {
           firstName: ['', Validators.required],
           lastName: ['', Validators.required],
           phone: ['', Validators.required],
-          pack: ['20'],
+          pack: ['21'],
           socioeugenio: false,
           sociotorre: false,
           nosocio: false
@@ -88,7 +88,7 @@ export class WorkshopsInscriptionComponent {
                     this.inscriptionId = resp;
                     sessionStorage.setItem('inscriptionId', this.inscriptionId + "");
                     sessionStorage.setItem('inscriptionEmail', this.form.controls.emailAddress + "");
-                    sessionStorage.setItem('pack', "20");
+                    sessionStorage.setItem('pack', "21");
                     sessionStorage.setItem('precio', this.precio + "");
                     this.router.navigate(['../signing-confirm'], dataForm);
 

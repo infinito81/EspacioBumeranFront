@@ -36,7 +36,7 @@ export class SigningConfirmComponent  implements OnInit {
       } else if (this.pack=="12"){
         this.mostrarVirago = true;
         this.precio = "450 euros";                
-      } else if (this.pack=="20"){
+      } else if (this.pack=="21"){
         console.log("activo mostrarTallerAmpa");
         this.mostrarTallerAmpa = true;
         //this.precio = "18 euros";
